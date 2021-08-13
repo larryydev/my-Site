@@ -2,5 +2,5 @@
 
 blog section for my personal website
 
-Frontend: Vue
+Frontend: Vue <br />
 Backend: FastAPI, NoSQL, and deploy to Deta
