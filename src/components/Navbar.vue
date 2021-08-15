@@ -17,7 +17,7 @@
       <router-link to="/work" class="nav-link">Work</router-link>
     </li>
     <li class="nav-item">
-      <a href="https://brkvxb.deta.dev/" class="nav-link">Blog</a>
+      <a href="https://larryyublog.deta.dev/" class="nav-link">Blog</a>
     </li>
 
   </ul>

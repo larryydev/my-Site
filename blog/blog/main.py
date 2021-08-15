@@ -4,16 +4,16 @@ import requests, json
 
 app = Flask(__name__)
 
-XAPIKey = 'secret'
+XAPIKey = 'h8mWXY88.bBEC8CWmjJmhnRmSdkMuZB-t4W48phcxu'
 
 @app.route("/")
 def index():
-    posts = json.loads(requests.get('https://38vaq8.deta.dev/blogs', 
+    posts = reversed(json.loads(requests.get('https://38vaq8.deta.dev/blogs', 
     headers= {
         'Content-Type': 'application/json',
         'X-API-Key': XAPIKey
         }
-    ).text)['_items']
+    ).text)['_items'])
     return render_template('blogs.html', posts = posts)
 
 
@@ -50,5 +50,5 @@ def blog():
     return render_template('singleblog.html', post = post)
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
