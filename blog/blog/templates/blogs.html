@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    {% for post in posts %}
+
+        <article class="media content-section">
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col" style="width: 77%;"></th>
+                      <th scope="col"></th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <th scope="row" style="font-size: 20px;">
+                        <a href="{{ url_for('blog', type= post.key ) }}" style="text-decoration: none; color: rgb(40, 103, 199); letter-spacing: 1px;">{{post.key}}</a>
+                    </th>
+                    
+                    <td>{{post.date}}</td>
+                  </tr>
+                </tbody>
+            </table>
+
+
+        </article>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,14 @@
+#blogsection {
+    padding: 30px 20% 0 20%;
+}
+  
+  
+#headersection h2 {
+    float: left;
+}
+  
+#headersection button {
+    float: right;
+}
+
+

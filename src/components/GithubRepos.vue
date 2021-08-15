@@ -53,7 +53,7 @@ export default {
     },
     created: function () {
         axios.get("https://api.github.com/users/ly0708/repos").then((response) => {
-        this.repos = response.data;
+            this.repos = response.data;
         });
     },
 }

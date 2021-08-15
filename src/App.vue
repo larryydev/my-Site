@@ -40,6 +40,8 @@ export default {
   color: #2c3e50;
 }
 
+
+
 img {
   width: 50vw;
 }
