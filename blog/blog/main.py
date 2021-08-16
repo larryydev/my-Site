@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, request
+from flask import Flask, render_template, url_for, redirect, request, Markup
 import requests, json
 
 
@@ -8,12 +8,12 @@ XAPIKey = 'h8mWXY88.bBEC8CWmjJmhnRmSdkMuZB-t4W48phcxu'
 
 @app.route("/")
 def index():
-    posts = reversed(json.loads(requests.get('https://38vaq8.deta.dev/blogs', 
+    posts = reversed(sorted(json.loads(requests.get('https://38vaq8.deta.dev/blogs', 
     headers= {
         'Content-Type': 'application/json',
         'X-API-Key': XAPIKey
         }
-    ).text)['_items'])
+    ).text)['_items'], key=lambda k: k['date']))
     return render_template('blogs.html', posts = posts)
 
 
@@ -47,6 +47,7 @@ def blog():
         'X-API-Key': XAPIKey
         }
     ).text)
+    post['content'] = Markup(post['content'].replace('\n', '<br/>'))
     return render_template('singleblog.html', post = post)
 
 

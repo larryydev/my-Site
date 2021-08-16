@@ -1,5 +1,5 @@
+from logging import debug
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from datetime import date
 from deta import Deta
@@ -7,9 +7,9 @@ from deta import Deta
 
 app = FastAPI()
 
-api_key = 'SECRET_KEY'
+key = 'secret'
 
-deta = Deta(api_key)
+deta = Deta(key)
 db = deta.Base('blogDB')
 
 
@@ -40,7 +40,7 @@ async def create_new_blog(blog: Blog):
     today = date.today()
 
     b = {
-        "key": blog.title,
+        "title": blog.title,
         "content": blog.content,
         "date": "Created: " + str(today),
     }
@@ -72,4 +72,4 @@ async def delete_blog(key: str):
         return ({"success": "deleted"}, 201)
     except Exception:
         return ({"error": "Not found"}, 404)
-        
+
