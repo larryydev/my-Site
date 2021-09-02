@@ -1,11 +1,11 @@
 <template>
 
     <div id="github">
-        <div class="container">
+                <div class="container">
+            <h4 style="text-align: left;">Open Source</h4>
             <table class="table is-bordered is-striped is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                    <th>#</th>
                     <th>Name</th>
                     <th>Language</th>
                     <th style="width: 50%">Description</th>
@@ -13,10 +13,29 @@
                 </thead>
                 <tbody>
                     <tr v-for="repo in repos" v-bind:key="repo.id">
-                    <td>{{ repos.indexOf(repo) + 1 }}</td>
-                    <td>{{ repo.name }}</td>
-                    <td>{{ repo.language }}</td>
-                    <td>{{ repo.description }}</td>
+                    <td v-if="repo.fork">{{ repo.name }}</td>
+                    <td v-if="repo.fork">{{ repo.language }}</td>
+                    <td v-if="repo.fork">{{ repo.description }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <h4 style="text-align: left;">Personal</h4>
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Language</th>
+                    <th style="width: 50%">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="repo in repos" v-bind:key="repo.id">
+                    <td v-if="!repo.fork">{{ repo.name }}</td>
+                    <td v-if="!repo.fork">{{ repo.language }}</td>
+                    <td v-if="!repo.fork">{{ repo.description }}</td>
                 </tr>
                 </tbody>
             </table>

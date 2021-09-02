@@ -5,8 +5,7 @@
     <h1>Hi, I am Larry Yu.</h1>
     <div id="about">      
       <p> I am a college student with a penchant for exploring technologies, and have multiple different interests. </p>
-      <p> As you can see from the art above, I am passionate in quantum computing, automation robotics, system thinking, and sustainbility. </p>
-      <p> This is the home/collection of what I have done. </p>
+      <p> As you can see from the art above, I am passionate in quantum computing, automation, robotics, system thinking, and sustainbility. </p>
       <p> Feel free to reach out to me in any form of contact. </p>
     </div>
   </div>
