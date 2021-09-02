@@ -6,8 +6,8 @@
             <table class="table is-bordered is-striped is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                    <th>Name</th>
-                    <th>Language</th>
+                    <th style="width: 30%">Name</th>
+                    <th style="width: 20%">Language</th>
                     <th style="width: 50%">Description</th>
                 </tr>
                 </thead>
@@ -26,8 +26,8 @@
             <table class="table is-bordered is-striped is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                    <th>Name</th>
-                    <th>Language</th>
+                    <th style="width: 30%">Name</th>
+                    <th style="width: 20%">Language</th>
                     <th style="width: 50%">Description</th>
                 </tr>
                 </thead>
